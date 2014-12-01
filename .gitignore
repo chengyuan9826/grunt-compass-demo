@@ -1,9 +1,12 @@
 node_modules
 bower_components
+.idea/
 .sass-cache
+
+# File
+
+
 demolib/css/*.*
 demolib/css/*/*.*
+demolib/css/*.css.map
 *.map
-demolib/css/main.css.map
-demolib/css/main.css.map
-.idea/
