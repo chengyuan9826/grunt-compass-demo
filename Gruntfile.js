@@ -1,54 +1,49 @@
 /*
- * 不同livereload端口设置
- * connect livereload端口设置不同的值
- * watch 下的livrereload 与其一一对应
- *
+ * compass demo 
+ * 三种模式
+ * cps：编译一次
+ * dev：监测变化,执行编译
+ * serve:监测变化，执行编译,刷新页面
  */
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 
     require('load-grunt-tasks')(grunt);
     require('time-grunt')(grunt);
     grunt.initConfig({
+        compass: {
+            dev: {
+                options: {
+                    sassDir: "src/scss",
+                    cssDir: "src/css",
+                    outputStyle: "nested",
+                }
+            }
+        },
         watch: {
-            demo: {
-                files: ['web/*.*'],
+            dev: {
+                files: ["src/scss/*.{scss,sass}"],
+                tasks: ["compass:dev"],
                 options: {
                     livereload: 5000
-                }
-            },
-            dev: {
-                files: ['web1/*.*'],
-                options: {
-                    livereload: 3030
                 }
             }
         },
         connect: {
-            demo: {
-                options: {
-                    base: "web",
-                    port: 1111,
-                    hostname: '*',
-                    livereload: 5000,
-                    open: {
-                        target: 'http://127.0.0.1:1111'
-                    }
-                }
-            },
             dev: {
                 options: {
-                    base: "web1",
-                    port: 2222,
-                    hostname: '*',
-                    livereload: 3030,
+                    base: "src",
+                    "port": "1024",
+                    hostname: "*",
+                    livereload: 5000,
                     open: {
-                        target: 'http://127.0.0.1:2222'
+                        target: "http://127.0.0.1:1024"
                     }
                 }
-            }
+            }H
         }
-    });
-    grunt.registerTask('demo', ['connect:demo', 'watch:demo']);
-    grunt.registerTask('dev', ['connect:dev', 'watch:dev']);
-};
+    })
+    grunt.registerTask("cps", ['compass:dev']);//运行一次执行一次编译
+    grunt.registerTask("dev", ["compass:dev", "watch:dev"]);//监测文件变化
+    grunt.registerTask("serve", ["connect:dev", "compass:dev", "watch:dev"]);//监测文件变化并刷新页面
 
+};
