@@ -1,0 +1,9 @@
+/* line 1, ../scss/_base.scss */
+.wrap {
+  width: 200px;
+  height: 200px;
+  background-color: lightgreen; }
+
+/* line 6, ../scss/_base.scss */
+h1 {
+  font-size: 20px; }
