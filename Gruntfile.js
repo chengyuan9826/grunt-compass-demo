@@ -15,13 +15,14 @@ module.exports = function(grunt) {
                 options: {
                     sassDir: "src/scss",
                     cssDir: "src/css",
+                    imagesDir:"src/images",
                     outputStyle: "nested",
                 }
             }
         },
         watch: {
             dev: {
-                files: ["src/scss/*.{scss,sass}"],
+                files: ["src/scss/{,*/}*.*","src/images/icon/*.*"],
                 tasks: ["compass:dev"],
                 options: {
                     livereload: 5000
@@ -39,7 +40,7 @@ module.exports = function(grunt) {
                         target: "http://127.0.0.1:1024"
                     }
                 }
-            }H
+            }
         }
     })
     grunt.registerTask("cps", ['compass:dev']);//运行一次执行一次编译
