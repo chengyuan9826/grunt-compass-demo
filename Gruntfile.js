@@ -15,8 +15,8 @@ module.exports = function(grunt) {
                 options: {
                     sassDir: "src/scss",
                     cssDir: "src/css",
-                    imagesDir:"src/images",
-                    outputStyle: "nested",
+                    imagesDir:"src/images", 
+                    outputStyle: "nested",/*nested、expanded、compact、compressed */
                 }
             }
         },
@@ -32,12 +32,12 @@ module.exports = function(grunt) {
         connect: {
             dev: {
                 options: {
-                    base: "src",
+                    base: ".",
                     "port": "1024",
                     hostname: "*",
                     livereload: 5000,
                     open: {
-                        target: "http://127.0.0.1:1024"
+                        target: "http://127.0.0.1:1024/src/index.html"
                     }
                 }
             }
