@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                 options: {
                     sassDir: "src/scss",
                     cssDir: "src/css",
-                    outputStyle: "nested",
+                    outputStyle: "nested"
                 }
             }
         },
@@ -39,9 +39,9 @@ module.exports = function(grunt) {
                         target: "http://127.0.0.1:1024"
                     }
                 }
-            }H
+            }
         }
-    })
+    });
     grunt.registerTask("cps", ['compass:dev']);//运行一次执行一次编译
     grunt.registerTask("dev", ["compass:dev", "watch:dev"]);//监测文件变化
     grunt.registerTask("serve", ["connect:dev", "compass:dev", "watch:dev"]);//监测文件变化并刷新页面
