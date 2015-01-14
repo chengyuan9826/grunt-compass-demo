@@ -15,13 +15,14 @@ module.exports = function(grunt) {
                 options: {
                     sassDir: "src/scss",
                     cssDir: "src/css",
+                    imagesDir:"src/images",
                     outputStyle: "nested"
                 }
             }
         },
         watch: {
             dev: {
-                files: ["src/scss/*.{scss,sass}"],
+                files: ["src/scss/{,*/}*.*","src/images/icon/*.*"],
                 tasks: ["compass:dev"],
                 options: {
                     livereload: 5000
