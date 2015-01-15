@@ -1,75 +1,9 @@
-/* line 1, ../scss/_base.scss */
 .wrap {
   width: 200px;
-  height: 200px; }
+  height: 200px;
+  background: lightblue; }
 
-/* line 6, ../scss/_base.scss */
-h1 {
-  font-size: 20px; }
+div {
+  width: 200px; }
 
-/* line 9, ../scss/_base.scss */
-h2 {
-  font-size: 75%; }
-
-/* line 12, ../scss/_base.scss */
-img {
-  max-width: 100%;
-  height: auto; }
-
-/* line 16, ../scss/_base.scss */
-li {
-  display: block; }
-
-/* line 19, ../scss/_base.scss */
-.icons-sprite, .icons-1, .icons-2, .icons-3, .icons-4, .icons-5, .icons-7 {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  vertical-align: middle; }
-
-/* line 96, icons/*.png */
-.icons-sprite, .icons-1, .icons-2, .icons-3, .icons-4, .icons-5, .icons-7 {
-  background-image: url('/src/images/icons-se7b150e3f1.png');
-  background-repeat: no-repeat; }
-
-/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-1 {
-  background-position: -8px -49px;
-  height: 54px;
-  width: 54px; }
-
-/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-1 {
-  background-position: -8px -49px;
-  height: 54px;
-  width: 54px; }
-
-/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-2 {
-  background-position: -9px -123px;
-  height: 54px;
-  width: 53px; }
-
-/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-3 {
-  background-position: -9px -197px;
-  height: 53px;
-  width: 53px; }
-
-/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-4 {
-  background-position: -9px -270px;
-  height: 53px;
-  width: 53px; }
-
-/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-5 {
-  background-position: -9px -343px;
-  height: 53px;
-  width: 53px; }
-
-/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-7 {
-  background-position: 0 -416px;
-  height: 62px;
-  width: 62px; }
+/*# sourceMappingURL=main.css.map */
