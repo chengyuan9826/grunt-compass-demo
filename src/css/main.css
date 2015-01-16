@@ -1,13 +1,10 @@
-/* line 1, ../scss/_base.scss */
 .wrap {
   width: 200px;
   height: 200px;
-  background-color: lightgreen; }
+  background: lightblue; }
 
-/* line 6, ../scss/_base.scss */
-h1 {
-  font-size: 20px; }
-
+div {
+  width: 200px; }
 /* line 9, ../scss/_base.scss */
 h2 {
   font-size: 75%; }
@@ -49,3 +46,4 @@ img {
 /* line 84, C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-7 {
   background-position: 0 -296px; }
+

@@ -1,5 +1,5 @@
 /*
- * compass demo 
+ * compass demo
  * 三种模式
  * cps：编译一次
  * dev：监测变化,执行编译
@@ -15,15 +15,26 @@ module.exports = function(grunt) {
                 options: {
                     sassDir: "src/scss",
                     cssDir: "src/css",
-                    imagesDir:"src/images",
+                    imagesDir: "src/images",
                     outputStyle: "nested"
+                    /*nested、expanded、compact、compressed */
+                }
+            }
+        },
+        sass: {
+            options: {
+                sourceMap: true
+            },
+            dist: {
+                files: {
+                    'src/css/main.css': 'src/scss/main.scss'
                 }
             }
         },
         watch: {
             dev: {
-                files: ["src/scss/{,*/}*.*","src/images/icon/*.*"],
-                tasks: ["compass:dev"],
+                files: ["src/scss/{,*/}*.*", "src/images/icon/*.*"],
+                tasks: ["sass"],
                 options: {
                     livereload: 2323
                 }
@@ -32,19 +43,20 @@ module.exports = function(grunt) {
         connect: {
             dev: {
                 options: {
-                    base: "src",
+                    base: ".",
                     "port": "1024",
                     hostname: "*",
                     livereload: 2323,
                     open: {
-                        target: "http://127.0.0.1:1024"
+                        target: "http://127.0.0.1:1024/src/index.html"
                     }
                 }
             }
         }
     });
-    grunt.registerTask("cps", ['compass:dev']);//运行一次执行一次编译
-    grunt.registerTask("dev", ["compass:dev", "watch:dev"]);//监测文件变化
-    grunt.registerTask("serve", ["connect:dev", "compass:dev", "watch:dev"]);//监测文件变化并刷新页面
+    grunt.registerTask("sss", ['sass']); //运行一次执行一次编译
+    grunt.registerTask("cps", ['compass:dev']);
+    grunt.registerTask("dev", ["compass:dev", "watch:dev"]); //监测文件变化
+    grunt.registerTask("serve", ["connect:dev", "sass", "watch:dev"]); //监测文件变化并刷新页面
 
 };

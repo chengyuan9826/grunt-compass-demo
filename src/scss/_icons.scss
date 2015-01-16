@@ -1,0 +1,8 @@
+@import "compass/utilities/sprites";
+
+$icons-position:100%;//x轴的位移，当为100%时靠右侧
+$icons-spacing: 20px;//图片间间距
+$icons-sprite-dimensions:true;//是否在生成的类中包含图片的尺寸
+@import "icons/*.png";
+@include all-icons-sprites;
+
