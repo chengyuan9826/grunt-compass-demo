@@ -25,7 +25,7 @@ module.exports = function(grunt) {
                 files: ["src/scss/{,*/}*.*","src/images/icon/*.*"],
                 tasks: ["compass:dev"],
                 options: {
-                    livereload: 5000
+                    livereload: 2323
                 }
             }
         },
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
                     base: "src",
                     "port": "1024",
                     hostname: "*",
-                    livereload: 5000,
+                    livereload: 2323,
                     open: {
                         target: "http://127.0.0.1:1024"
                     }
